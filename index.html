@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>
+            BIBDA Theorie des jeux 2024
+        </h1>
+
+        <div>
+        <h2>
+            Realized by: Yahya Saadaoui
+        </h2>
+        <h2>
+            Supervised by: Professor Mohamed Nabil
+        </h2>
+
+        </div>
+    </header>
+    <div id="container">
+        <div id="strs1">
+            <label for="strp1">Enter the number of strategies for player 1:</label>
+            <input type="text" id="strP1" value="2">
+        </div>
+        <div id="strs2">
+            <label for="strp2">Enter the number of strategies for player 2:</label>
+            <input type="text" id="strP2" value="2">
+        </div>
+        <button id="go">Go</button>
+    </div>
+    <script src="helper.js"></script>
+    <script src="NormalFormTable.js"></script>
+    
+    <script >
+        go.onclick = () => {
+            let nbstrp1 = parseInt(strP1.value);
+            let nbstrp2 = parseInt(strP2.value);
+            const thg = new NormalFormTable(nbstrp1,nbstrp2, container);
+        }
+    </script>
+</body>
+</html>
